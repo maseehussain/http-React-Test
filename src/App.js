@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from "react";
 
-import Blog from './containers/Blog/Blog';
+import Blog from "./containers/Blog/Blog";
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div className="App">
