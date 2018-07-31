@@ -7,13 +7,22 @@ import NewPost from "../../components/NewPost/NewPost";
 import "./Blog.css";
 
 class Blog extends React.Component {
+  state = {
+    posts: []
+  };
+
   componentDidMount() {
     Axios.get("https://jsonplaceholder.typicode.com/posts").then(res => {
-      console.log(res);
+      this.setState({ posts: res.data });
+      //console.log(res);
     });
   }
 
   render() {
+    const posts = this.state.posts.map(post => {
+      return <Post />;
+    });
+
     return (
       <div>
         <section className="Posts">
