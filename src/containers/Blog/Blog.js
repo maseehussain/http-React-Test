@@ -20,16 +20,12 @@ class Blog extends React.Component {
 
   render() {
     const posts = this.state.posts.map(post => {
-      return <Post />;
+      return <Post key={post.id} title={post.title} />;
     });
 
     return (
       <div>
-        <section className="Posts">
-          <Post />
-          <Post />
-          <Post />
-        </section>
+        <section className="Posts">{posts}</section>
         <section>
           <FullPost />
         </section>
