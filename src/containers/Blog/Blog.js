@@ -9,7 +9,7 @@ import "./Blog.css";
 class Blog extends React.Component {
   state = {
     posts: [],
-    selectedPostId: ""
+    selectedPostId: null
   };
 
   componentDidMount() {
@@ -28,7 +28,9 @@ class Blog extends React.Component {
 
   //Method for my click event
 
-  postSelectedHandler = id => {};
+  postSelectedHandler = id => {
+    this.setState({ selectedPostId: id });
+  };
 
   render() {
     const posts = this.state.posts.map(post => {
