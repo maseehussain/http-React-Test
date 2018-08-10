@@ -18,7 +18,8 @@ class FullPost extends React.Component {
       Axios.get(
         "https://jsonplaceholder.typicode.com/posts/" + this.props.id
       ).then(res => {
-        console.log(res);
+        //32- set the state to loadedPost with value of the response data
+        this.setState({ loadedPost: res.data });
       });
     }
   }
@@ -27,11 +28,13 @@ class FullPost extends React.Component {
     let post = <p style={{ textAlign: "center" }}>Please select a Post!</p>;
     //25- add an if statement which reads if it is trueish(null is treated as false)
     //then output the post.
+
+    //31- then here we put {loadedPost.title}, {loadedPost.body}
     if (this.props.id) {
       post = (
         <div className="FullPost">
-          <h1>Title</h1>
-          <p>Content</p>
+          <h1>{loadedPost.title}</h1>
+          <p>{loadedPost.body}</p>
           <div className="Edit">
             <button className="Delete">Delete</button>
           </div>
