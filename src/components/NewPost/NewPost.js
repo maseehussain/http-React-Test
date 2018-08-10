@@ -6,7 +6,7 @@ class NewPost extends React.Component {
   state = {
     title: "",
     content: "",
-    author: "Max"
+    author: "Masee"
   };
 
   render() {
@@ -30,8 +30,8 @@ class NewPost extends React.Component {
           value={this.state.author}
           onChange={event => this.setState({ author: event.target.value })}
         >
-          <option value="Max">Max</option>
-          <option value="Manu">Manu</option>
+          <option value="Masee">Masee</option>
+          <option value="Maiwand">Maiwand</option>
         </select>
         <button>Add Post</button>
       </div>
