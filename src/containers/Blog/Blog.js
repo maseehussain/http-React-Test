@@ -41,7 +41,8 @@ class Blog extends React.Component {
       })
       //46- Catch the error
       .catch(err => {
-        //48- We removed the log
+        //48- We removed the log and instead call setState
+        this.setState({ selectedPostId: id });
       });
   }
 
