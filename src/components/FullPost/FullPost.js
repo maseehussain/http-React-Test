@@ -32,7 +32,11 @@ class FullPost extends React.Component {
   }
 
   //42- We need to make a delete request handler
-  deletePostHandler = () => {};
+  deletePostHandler = () => {
+    //44- We have already imported axios we just need to use the delete method
+    //45- We will need the same URL as the componentDidUpdate method
+    Axios.delete("https://jsonplaceholder.typicode.com/posts/" + this.props.id);
+  };
 
   render() {
     let post = <p style={{ textAlign: "center" }}>Please select a Post!</p>;
