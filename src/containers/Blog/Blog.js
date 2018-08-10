@@ -8,7 +8,8 @@ import "./Blog.css";
 
 class Blog extends React.Component {
   state = {
-    posts: []
+    posts: [],
+    selectedPostId: ""
   };
 
   componentDidMount() {
@@ -45,7 +46,7 @@ class Blog extends React.Component {
       <div>
         <section className="Posts">{posts}</section>
         <section>
-          <FullPost />
+          <FullPost id={this.state.selectedPostId} />
         </section>
         <section>
           <NewPost />
