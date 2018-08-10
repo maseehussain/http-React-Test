@@ -31,6 +31,9 @@ class FullPost extends React.Component {
     }
   }
 
+  //42- We need to make a delete request handler
+  deletePostHandler = () => {};
+
   render() {
     let post = <p style={{ textAlign: "center" }}>Please select a Post!</p>;
     //33- We get an error message because the request is a promise first we the id the the post data
