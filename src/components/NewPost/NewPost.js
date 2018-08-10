@@ -20,7 +20,10 @@ class NewPost extends React.Component {
     };
     //38- create your post request
     //40- I also need to add data as a second argument in the .post request
-    Axios.post("https://jsonplaceholder.typicode.com/posts", data);
+    Axios.post("https://jsonplaceholder.typicode.com/posts", data).then(res => {
+      //41- We can listen to the response
+      console.log(res);
+    });
   };
 
   render() {
