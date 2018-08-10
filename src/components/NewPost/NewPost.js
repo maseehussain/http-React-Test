@@ -1,4 +1,6 @@
 import React from "react";
+//38- import axios
+import Axios from "react";
 
 import "./NewPost.css";
 
@@ -9,9 +11,19 @@ class NewPost extends React.Component {
     author: "Masee"
   };
   //36- How to add new posts, add a method
-  postDataHandler = () => {};
-  //37- We need to add an onClick={this.postDataHandler} in the add post button
+  postDataHandler = () => {
+    //39- The data we want to send is JS object with title, content and author
+    const post = {
+      title: this.state.title,
+      body: this.state.content,
+      author: this.state.author
+    };
+    //38- create your post request
+    Axios.post("https://jsonplaceholder.typicode.com/posts");
+  };
+
   render() {
+    //37- We need to add an onClick={this.postDataHandler} in the add post button
     return (
       <div className="NewPost">
         <h1>Add a Post</h1>
