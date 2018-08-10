@@ -25,9 +25,20 @@ class Blog extends React.Component {
     });
   }
 
+  //Method for my click event
+
+  postSelectedHandler = id => {};
+
   render() {
     const posts = this.state.posts.map(post => {
-      return <Post key={post.id} title={post.title} author={post.author} />;
+      return (
+        <Post
+          key={post.id}
+          title={post.title}
+          author={post.author}
+          clicked={() => this.postSelectedHandler(post.id)}
+        />
+      );
     });
 
     return (
