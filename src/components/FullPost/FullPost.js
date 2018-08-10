@@ -15,12 +15,19 @@ class FullPost extends React.Component {
     //28- .then to
     //29- We need to make sure it is not null but true with the if statement
     if (this.props.id) {
-      Axios.get(
-        "https://jsonplaceholder.typicode.com/posts/" + this.props.id
-      ).then(res => {
-        //32- set the state to loadedPost with value of the response data
-        this.setState({ loadedPost: res.data });
-      });
+      //35- We have created an infinite loop where componentDidUpdate gets called after each request
+      //to correct this we need to add another if check inside our outer if statement
+      if (
+        !this.state.loadedPost ||
+        (this.state.loadedPost && this.state.loadedPost.id !== this.props.id)
+      ) {
+        Axios.get(
+          "https://jsonplaceholder.typicode.com/posts/" + this.props.id
+        ).then(res => {
+          //32- set the state to loadedPost with value of the response data
+          this.setState({ loadedPost: res.data });
+        });
+      }
     }
   }
 
