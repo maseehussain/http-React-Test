@@ -1,6 +1,6 @@
 import React from "react";
 //38- import axios
-import Axios from "react";
+import Axios from "axios";
 
 import "./NewPost.css";
 
