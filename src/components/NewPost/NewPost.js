@@ -13,13 +13,14 @@ class NewPost extends React.Component {
   //36- How to add new posts, add a method
   postDataHandler = () => {
     //39- The data we want to send is JS object with title, content and author
-    const post = {
+    const data = {
       title: this.state.title,
       body: this.state.content,
       author: this.state.author
     };
     //38- create your post request
-    Axios.post("https://jsonplaceholder.typicode.com/posts");
+    //40- I also need to add data as a second argument in the .post request
+    Axios.post("https://jsonplaceholder.typicode.com/posts", data);
   };
 
   render() {
