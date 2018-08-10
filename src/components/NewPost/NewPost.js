@@ -10,7 +10,7 @@ class NewPost extends React.Component {
   };
   //36- How to add new posts, add a method
   postDataHandler = () => {};
-
+  //37- We need to add an onClick={this.postDataHandler} in the add post button
   render() {
     return (
       <div className="NewPost">
@@ -35,7 +35,7 @@ class NewPost extends React.Component {
           <option value="Masee">Masee</option>
           <option value="Maiwand">Maiwand</option>
         </select>
-        <button>Add Post</button>
+        <button onClick={this.postDataHandler}>Add Post</button>
       </div>
     );
   }
