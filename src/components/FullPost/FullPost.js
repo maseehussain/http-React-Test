@@ -5,7 +5,7 @@ import Axios from "axios";
 import "./FullPost.css";
 
 class FullPost extends React.Component {
-  //26- make out componentDidUpdate method to make http request
+  //26- make componentDidUpdate method to make http request
   componentDidUpdate() {
     Axios.get();
   }
