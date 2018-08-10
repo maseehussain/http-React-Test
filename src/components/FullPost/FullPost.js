@@ -5,6 +5,10 @@ import Axios from "axios";
 import "./FullPost.css";
 
 class FullPost extends React.Component {
+  //30- add a state to manage
+  state = {
+    loadedPost: null
+  };
   //26- make componentDidUpdate method to make http request
   componentDidUpdate() {
     //27- We take the id we got from the props
