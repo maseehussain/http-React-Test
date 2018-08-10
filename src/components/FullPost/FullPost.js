@@ -7,7 +7,16 @@ import "./FullPost.css";
 class FullPost extends React.Component {
   //26- make componentDidUpdate method to make http request
   componentDidUpdate() {
-    Axios.get();
+    //27- We take the id we got from the props
+    //28- .then to
+    //29- We need to make sure it is not null but true with the if statement
+    if (this.props.id) {
+      Axios.get(
+        "https://jsonplaceholder.typicode.com/posts/" + this.props.id
+      ).then(res => {
+        console.log(res);
+      });
+    }
   }
 
   render() {
