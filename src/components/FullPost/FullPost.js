@@ -29,13 +29,14 @@ class FullPost extends React.Component {
     //33- We get an error message because the request is a promise first we the id the the post data
     //we need a if request to show a loading message
     if (this.props.id) {
-      let post = <p style={{ textAlign: "center" }}>Loading...</p>;
+      post = <p style={{ textAlign: "center" }}>Loading...</p>;
     }
     //25- add an if statement which reads if it is trueish(null is treated as false)
     //then output the post.
     //31- then here we put {loadedPost.title}, {loadedPost.body}
     //32- We need to use this.state
-    if (this.props.id) {
+    //34- We to check if state LoadedPost has been checked this.state.loadedPost
+    if (this.state.loadedPost) {
       post = (
         <div className="FullPost">
           <h1>{this.state.loadedPost.title}</h1>
