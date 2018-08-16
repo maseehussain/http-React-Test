@@ -23,7 +23,7 @@ class Blog extends React.Component {
     //4- Use axios .get request to access URL for the data
     //5- Axios uses promises and .get returns a promise
     //6- We chain .then onto our .get request .then is a method which takes a function as an input.
-    Axios.get("https://jsonplaceholder.typicode.com/postsss")
+    Axios.get("https://jsonplaceholder.typicode.com/posts")
       .then(res => {
         //14- We reduce the amount of posts we recieve and we only get the from their index 0 to 4
         const posts = res.data.slice(0, 4);
