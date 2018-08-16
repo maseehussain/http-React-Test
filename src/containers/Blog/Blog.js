@@ -1,6 +1,6 @@
 import React from "react";
 //3- Import Axios
-import Axios from "axios";
+// import Axios from "axios";
 
 import Post from "../../components/Post/Post";
 import FullPost from "../../components/FullPost/FullPost";
