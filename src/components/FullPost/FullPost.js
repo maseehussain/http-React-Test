@@ -21,9 +21,7 @@ class FullPost extends React.Component {
         !this.state.loadedPost ||
         (this.state.loadedPost && this.state.loadedPost.id !== this.props.id)
       ) {
-        Axios.get(
-          "https://jsonplaceholder.typicode.com/posts/" + this.props.id
-        ).then(res => {
+        Axios.get("/posts/" + this.props.id).then(res => {
           //32- set the state to loadedPost with value of the response data
           this.setState({ loadedPost: res.data });
         });
@@ -35,9 +33,7 @@ class FullPost extends React.Component {
   deletePostHandler = () => {
     //44- We have already imported axios we just need to use the delete method
     //45- We will need the same URL as the componentDidUpdate method
-    Axios.delete(
-      "https://jsonplaceholder.typicode.com/posts/" + this.props.id
-    ).then(res => {
+    Axios.delete("/posts/" + this.props.id).then(res => {
       console.log(res);
     });
   };
