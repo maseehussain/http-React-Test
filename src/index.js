@@ -7,8 +7,9 @@ import registerServiceWorker from "./registerServiceWorker";
 import Axios from "axios";
 
 //47- accessing the interceptors
-Axios.interceptors.request.use(req => {
-  console.log(req);
+Axios.interceptors.request.use(request => {
+  console.log(request);
+  return request;
 });
 
 ReactDOM.render(<App />, document.getElementById("root"));
