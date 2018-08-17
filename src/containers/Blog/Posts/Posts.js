@@ -1,5 +1,5 @@
 import React from "react";
-import Axios from "../../../axios";
+import Axios from "../../../Axios";
 
 class Posts extends React.Component {
   //7- Created a state for my posts where I can manage them.

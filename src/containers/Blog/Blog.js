@@ -1,7 +1,8 @@
 import React from "react";
 //3- Import Axios
 // import Axios from "axios";
-import Axios from "../../Axios";
+//import Axios from "../../Axios";
+import Posts from "./Posts/Posts";
 import "./Blog.css";
 
 class Blog extends React.Component {
