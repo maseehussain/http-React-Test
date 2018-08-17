@@ -23,6 +23,7 @@ class Blog extends React.Component {
             </ul>
           </nav>
         </header>
+        <Posts />
       </div>
     );
   }
