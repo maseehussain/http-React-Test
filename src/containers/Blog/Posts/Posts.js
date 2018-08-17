@@ -1,4 +1,5 @@
 import React from "react";
+import Axios from "../../../axios";
 
 class Posts extends React.Component {
   //7- Created a state for my posts where I can manage them.
@@ -7,6 +8,36 @@ class Posts extends React.Component {
   state = {
     posts: []
   };
+
+  //1-Install Axios
+  //2- Implement componentDidMount method
+  componentDidMount() {
+    //4- Use axios .get request to access URL for the data
+    //5- Axios uses promises and .get returns a promise
+    //6- We chain .then onto our .get request .then is a method which takes a function as an input.
+    Axios.get("/posts")
+      .then(res => {
+        //14- We reduce the amount of posts we recieve and we only get the from their index 0 to 4
+        const posts = res.data.slice(0, 4);
+        //15- I take the post and map through them and distribute the property of the post
+        // I also added a new author property
+        const updatedPosts = posts.map(post => {
+          return {
+            ...post,
+            author: "Masee"
+          };
+        });
+        //16- set updatedPost to my setState
+        this.setState({ posts: updatedPosts });
+        //console.log(res);
+      })
+      //46- Catch the error
+      .catch(err => {
+        //48- We removed the log and instead call setState
+        console.log(error);
+        //this.setState({ err: true });
+      });
+  }
 
   //21- Method for my click event with an id argument
   //24- In the handler get the setState and set selectedPostId to our argument id
