@@ -3,6 +3,8 @@ import Axios from "../../../Axios";
 
 import Post from "../../../components/Post/Post";
 
+import "./Posts.css";
+
 class Posts extends React.Component {
   //7- Created a state for my posts where I can manage them.
   //23- We create that selectedPostId in out state with a null value
