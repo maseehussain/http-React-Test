@@ -78,7 +78,7 @@ class Blog extends React.Component {
     //10- We output our array of {posts}
     //22- id={this.state.selectedPostId} gets passed to my FullPosts component
     return (
-      <div className="Blogs">
+      <div className="Blog">
         <header>
           <nav>
             <ul>
