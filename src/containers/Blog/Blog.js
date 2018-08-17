@@ -78,7 +78,19 @@ class Blog extends React.Component {
     //10- We output our array of {posts}
     //22- id={this.state.selectedPostId} gets passed to my FullPosts component
     return (
-      <div>
+      <div className="Blogs">
+        <header>
+          <nav>
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/new-post">New Post</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
         <section className="Posts">{posts}</section>
         <section>
           <FullPost id={this.state.selectedPostId} />
