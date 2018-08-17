@@ -5,9 +5,7 @@ class Posts extends React.Component {
   //23- We create that selectedPostId in out state with a null value
   //47- You can update the state with err: false to show someting went wrong
   state = {
-    posts: [],
-    selectedPostId: null,
-    err: false
+    posts: []
   };
 
   render() {
