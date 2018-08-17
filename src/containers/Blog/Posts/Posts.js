@@ -2,7 +2,6 @@ import React from "react";
 import Axios from "../../../Axios";
 
 import Post from "../../../components/Post/Post";
-
 import "./Posts.css";
 
 class Posts extends React.Component {

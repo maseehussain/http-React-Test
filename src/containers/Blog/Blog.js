@@ -2,6 +2,8 @@ import React from "react";
 //3- Import Axios
 // import Axios from "axios";
 //import Axios from "../../Axios";
+import { Route } from "react-router-dom";
+
 import Posts from "./Posts/Posts";
 import "./Blog.css";
 
@@ -23,7 +25,7 @@ class Blog extends React.Component {
             </ul>
           </nav>
         </header>
-        <Posts />
+        <Route path="/" exact component={Posts} />
       </div>
     );
   }
