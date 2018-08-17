@@ -8,6 +8,12 @@ class Posts extends React.Component {
     posts: []
   };
 
+  //21- Method for my click event with an id argument
+  //24- In the handler get the setState and set selectedPostId to our argument id
+  postSelectedHandler = id => {
+    this.setState({ selectedPostId: id });
+  };
+
   render() {
     //49- Instead of creatinfg a constant we create a varaible post with an if statement
     //if it is true it display

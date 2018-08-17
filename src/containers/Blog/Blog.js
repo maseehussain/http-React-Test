@@ -34,12 +34,6 @@ class Blog extends React.Component {
       });
   }
 
-  //21- Method for my click event with an id argument
-  //24- In the handler get the setState and set selectedPostId to our argument id
-  postSelectedHandler = id => {
-    this.setState({ selectedPostId: id });
-  };
-
   render() {
     //10- We output our array of {posts}
     //22- id={this.state.selectedPostId} gets passed to my FullPosts component
