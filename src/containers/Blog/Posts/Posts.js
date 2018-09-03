@@ -62,12 +62,14 @@ class Posts extends React.Component {
         //18- I pass {post.author}
         //20- In the blog container I now need to pass that click prop to the post
         return (
-          <Post
-            key={post.id}
-            title={post.title}
-            author={post.author}
-            clicked={() => this.postSelectedHandler(post.id)}
-          />
+          <Link to={post.id}>
+            <Post
+              key={post.id}
+              title={post.title}
+              author={post.author}
+              clicked={() => this.postSelectedHandler(post.id)}
+            />
+          </Link>
         );
       });
     }
