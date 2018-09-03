@@ -18,7 +18,9 @@ class Blog extends React.Component {
           <nav>
             <ul>
               <li>
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/" exact>
+                  Home
+                </NavLink>
               </li>
               <li>
                 <NavLink
