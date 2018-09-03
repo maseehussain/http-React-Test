@@ -29,6 +29,9 @@ class FullPost extends React.Component {
     }
   }
 
+  componentDidUpdate() {}
+
+  loadData() {}
   //42- We need to make a delete request handler
   deletePostHandler = () => {
     //44- We have already imported axios we just need to use the delete method
