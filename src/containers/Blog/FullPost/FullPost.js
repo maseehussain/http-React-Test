@@ -11,6 +11,12 @@ class FullPost extends React.Component {
   };
   //26- make componentDidUpdate method to make http request
   componentDidMount() {
+    console.log(this.props);
+  }
+
+  componentDidUpdate() {}
+
+  loadData() {
     //27- We take the id we got from the props
     //28- .then to
     //29- We need to make sure it is not null but true with the if statement
@@ -28,10 +34,6 @@ class FullPost extends React.Component {
       }
     }
   }
-
-  componentDidUpdate() {}
-
-  loadData() {}
   //42- We need to make a delete request handler
   deletePostHandler = () => {
     //44- We have already imported axios we just need to use the delete method
