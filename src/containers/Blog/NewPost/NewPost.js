@@ -1,6 +1,7 @@
 import React from "react";
 //38- import axios
 import Axios from "axios";
+import { Redirect } from "react-router-dom";
 
 import "./NewPost.css";
 
