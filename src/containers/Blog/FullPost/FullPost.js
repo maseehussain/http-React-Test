@@ -10,18 +10,18 @@ class FullPost extends React.Component {
     loadedPost: null
   };
   //26- make componentDidUpdate method to make http request
-  componentDidUpdate() {
+  componentDidMount() {
     //27- We take the id we got from the props
     //28- .then to
     //29- We need to make sure it is not null but true with the if statement
-    if (this.props.id) {
+    if (this.props.match.params.id) {
       //35- We have created an infinite loop where componentDidUpdate gets called after each request
       //to correct this we need to add another if check inside our outer if statement
       if (
         !this.state.loadedPost ||
         (this.state.loadedPost && this.state.loadedPost.id !== this.props.id)
       ) {
-        Axios.get("/posts/" + this.props.id).then(res => {
+        Axios.get("/posts/" + this.props.match.params.id).then(res => {
           //32- set the state to loadedPost with value of the response data
           this.setState({ loadedPost: res.data });
         });
