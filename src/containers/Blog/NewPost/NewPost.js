@@ -25,7 +25,8 @@ class NewPost extends React.Component {
     Axios.post("/posts", data).then(res => {
       //41- We can listen to the response
       console.log(res);
-      this.setState({ submitted: true });
+      this.props.history.push("/posts");
+      // this.setState({ submitted: true });
     });
   };
 
