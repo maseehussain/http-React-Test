@@ -44,6 +44,7 @@ class Blog extends React.Component {
         </header>
         <Route path="/" exact component={Posts} />
         <Route path="/new-post" component={NewPost} />
+        <Route path="/:id" exact component={Posts} />
       </div>
     );
   }
