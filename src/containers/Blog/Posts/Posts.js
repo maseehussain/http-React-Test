@@ -63,7 +63,7 @@ class Posts extends React.Component {
         //18- I pass {post.author}
         //20- In the blog container I now need to pass that click prop to the post
         return (
-          <Link to={"/" + post.id} key={post.id}>
+          <Link to={"/posts/" + post.id} key={post.id}>
             <Post
               title={post.title}
               author={post.author}
@@ -76,7 +76,11 @@ class Posts extends React.Component {
     return (
       <div>
         <section className="Posts">{posts}</section>
-        <Route path="/:id" exact component={FullPost} />
+        <Route
+          path={this.props.match.url + "/:id"}
+          exact
+          component={FullPost}
+        />
       </div>
     );
   }
