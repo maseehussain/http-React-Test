@@ -10,6 +10,10 @@ class NewPost extends React.Component {
     content: "",
     author: "Masee"
   };
+
+  componentDidMount() {
+    console.log(this.props);
+  }
   //36- How to add new posts, add a method
   postDataHandler = () => {
     //39- The data we want to send is JS object with title, content and author
