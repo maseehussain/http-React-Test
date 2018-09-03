@@ -28,7 +28,8 @@ class FullPost extends React.Component {
       //to correct this we need to add another if check inside our outer if statement
       if (
         !this.state.loadedPost ||
-        (this.state.loadedPost && this.state.loadedPost.id !== this.props.id)
+        (this.state.loadedPost &&
+          this.state.loadedPost.id !== this.props.match.params.id)
       ) {
         Axios.get("/posts/" + this.props.match.params.id).then(res => {
           //32- set the state to loadedPost with value of the response data
