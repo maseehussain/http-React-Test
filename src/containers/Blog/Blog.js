@@ -18,7 +18,15 @@ class Blog extends React.Component {
           <nav>
             <ul>
               <li>
-                <NavLink to="/" exact activeClassName="my-active">
+                <NavLink
+                  to="/"
+                  exact
+                  activeClassName="my-active"
+                  activeStyle={{
+                    color: "#fa923f",
+                    textDecoration: "underline"
+                  }}
+                >
                   Home
                 </NavLink>
               </li>

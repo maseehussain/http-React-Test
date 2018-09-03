@@ -19,4 +19,5 @@
 .Blog a:active,
 .Blog a.active {
   color: orange;
+  text-decoration: underline;
 }
