@@ -12,6 +12,7 @@ class FullPost extends React.Component {
   //26- make componentDidUpdate method to make http request
   componentDidMount() {
     console.log(this.props);
+    this.loadData();
   }
 
   componentDidUpdate() {}
