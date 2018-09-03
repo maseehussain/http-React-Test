@@ -28,7 +28,7 @@ class Blog extends React.Component {
                     textDecoration: "underline"
                   }}
                 >
-                  Home
+                  Posts
                 </NavLink>
               </li>
               <li>
@@ -46,7 +46,6 @@ class Blog extends React.Component {
         <Switch>
           <Route path="/" exact component={Posts} />
           <Route path="/new-post" component={NewPost} />
-          <Route path="/:id" exact component={FullPost} />
         </Switch>
       </div>
     );
