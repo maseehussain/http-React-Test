@@ -9,7 +9,8 @@ class NewPost extends React.Component {
   state = {
     title: "",
     content: "",
-    author: "Masee"
+    author: "Masee",
+    submitted: false
   };
   //36- How to add new posts, add a method
   postDataHandler = () => {
@@ -24,13 +25,19 @@ class NewPost extends React.Component {
     Axios.post("/posts", data).then(res => {
       //41- We can listen to the response
       console.log(res);
+      this.setState({ submitted: true });
     });
   };
 
   render() {
+    let redirect = null;
+    if (this.state.submitted) {
+      redirect = <Redirect to="/posts" />;
+    }
     //37- We need to add an onClick={this.postDataHandler} in the add post button
     return (
       <div className="NewPost">
+        {redirect}
         <h1>Add a Post</h1>
         <label>Title</label>
         <input
