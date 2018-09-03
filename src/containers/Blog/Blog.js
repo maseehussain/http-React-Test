@@ -2,7 +2,7 @@ import React from "react";
 //3- Import Axios
 // import Axios from "axios";
 //import Axios from "../../Axios";
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 
 import Posts from "./Posts/Posts";
 import NewPost from "./NewPost/NewPost";
@@ -18,10 +18,16 @@ class Blog extends React.Component {
           <nav>
             <ul>
               <li>
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="/new-post">New Post</a>
+                <Link
+                  to={{
+                    pathname: "/new-post"
+                  }}
+                >
+                  New Post
+                </Link>
               </li>
             </ul>
           </nav>
