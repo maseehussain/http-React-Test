@@ -15,7 +15,9 @@ class FullPost extends React.Component {
     this.loadData();
   }
 
-  componentDidUpdate() {}
+  componentDidUpdate() {
+    this.loadData();
+  }
 
   loadData() {
     //27- We take the id we got from the props
