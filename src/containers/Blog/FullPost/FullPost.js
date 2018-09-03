@@ -29,7 +29,7 @@ class FullPost extends React.Component {
       if (
         !this.state.loadedPost ||
         (this.state.loadedPost &&
-          this.state.loadedPost.id !== this.props.match.params.id)
+          this.state.loadedPost.id !== +this.props.match.params.id)
       ) {
         Axios.get("/posts/" + this.props.match.params.id).then(res => {
           //32- set the state to loadedPost with value of the response data
