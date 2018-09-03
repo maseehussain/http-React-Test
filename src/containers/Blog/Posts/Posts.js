@@ -15,7 +15,6 @@ class Posts extends React.Component {
   //1-Install Axios
   //2- Implement componentDidMount method
   componentDidMount() {
-    console.log(this.props);
     //4- Use axios .get request to access URL for the data
     //5- Axios uses promises and .get returns a promise
     //6- We chain .then onto our .get request .then is a method which takes a function as an input.
@@ -38,7 +37,7 @@ class Posts extends React.Component {
       //46- Catch the error
       .catch(err => {
         //48- We removed the log and instead call setState
-        console.log(error);
+        console.log(err);
         //this.setState({ err: true });
       });
   }
