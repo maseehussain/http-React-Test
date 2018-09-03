@@ -42,7 +42,7 @@ class FullPost extends React.Component {
   deletePostHandler = () => {
     //44- We have already imported axios we just need to use the delete method
     //45- We will need the same URL as the componentDidUpdate method
-    Axios.delete("/posts/" + this.props.id).then(res => {
+    Axios.delete("/posts/" + this.props.match.params.id).then(res => {
       console.log(res);
     });
   };
@@ -51,7 +51,7 @@ class FullPost extends React.Component {
     let post = <p style={{ textAlign: "center" }}>Please select a Post!</p>;
     //33- We get an error message because the request is a promise first we the id the the post data
     //we need a if request to show a loading message
-    if (this.props.id) {
+    if (this.props.match.params.id) {
       post = <p style={{ textAlign: "center" }}>Loading...</p>;
     }
     //25- add an if statement which reads if it is trueish(null is treated as false)
