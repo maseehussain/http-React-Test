@@ -2,7 +2,7 @@ import React from "react";
 //3- Import Axios
 // import Axios from "axios";
 //import Axios from "../../Axios";
-import { Route, NavLink, Switch, Redirect } from "react-router-dom";
+import { Route, NavLink, Switch /*Redirect*/ } from "react-router-dom";
 
 import Posts from "./Posts/Posts";
 // import NewPost from "./NewPost/NewPost";
@@ -27,7 +27,7 @@ class Blog extends React.Component {
             <ul>
               <li>
                 <NavLink
-                  to="/posts/"
+                  to="/posts"
                   exact
                   activeClassName="my-active"
                   activeStyle={{
