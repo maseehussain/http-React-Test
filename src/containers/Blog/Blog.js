@@ -10,7 +10,7 @@ import "./Blog.css";
 import asyncComponent from "../../hoc/asyncComponent";
 
 const AsyncNewPost = asyncComponent(() => {
-  return import(); 
+  return import("./NewPost/NewPost");
 });
 
 class Blog extends React.Component {
