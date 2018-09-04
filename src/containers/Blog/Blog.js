@@ -9,7 +9,9 @@ import Posts from "./Posts/Posts";
 import "./Blog.css";
 import asyncComponent from "../../hoc/asyncComponent";
 
-const AsyncNewPost = asyncComponent();
+const AsyncNewPost = asyncComponent(() => {
+  return import(); 
+});
 
 class Blog extends React.Component {
   state = {
